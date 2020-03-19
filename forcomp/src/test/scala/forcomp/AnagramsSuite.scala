@@ -31,8 +31,8 @@ class AnagramsSuite {
 
 
   @Test def `subtract: lard - r (10pts)`: Unit = {
-    val lard = List(('a', 1), ('d', 1), ('l', 1), ('r', 1))
-    val r = List(('r', 1))
+    val lard = List(('a', 1), ('d', 1), ('l', 2), ('r', 1))
+    val r = List(('l', 1), ('r', 1))
     val lad = List(('a', 1), ('d', 1), ('l', 1))
     assertEquals(lad, subtract(lard, r))
   }
@@ -91,5 +91,5 @@ class AnagramsSuite {
   }
 
 
-  @Rule def individualTestTimeout = new org.junit.rules.Timeout(10 * 1000)
+//  @Rule def individualTestTimeout = new org.junit.rules.Timeout(10 * 1000)
 }
